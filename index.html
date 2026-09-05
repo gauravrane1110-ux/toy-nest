@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToyNest | Creative Toys</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <a href="#" class="logo">🧸 Toy<span>Nest</span></a>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#toys">Toys</a>
+    <a href="#creative">Creative Toys</a>
+    <a href="#about">About</a>
+  </nav>
+  <button class="cart-btn" onclick="showCart()">🛒 Cart <span id="cartCount">0</span></button>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <p class="tag">PLAY • CREATE • IMAGINE</p>
+      <h1>Big adventures<br><span>start with little toys.</span></h1>
+      <p>Discover fun, colorful and creative toys designed to make playtime more exciting.</p>
+      <a href="#toys" class="primary-btn">Explore Toys →</a>
+    </div>
+    <div class="hero-toy">
+      <div class="sun"></div>
+      <div class="toy-emoji">🧸</div>
+      <div class="cloud cloud1">☁️</div>
+      <div class="cloud cloud2">☁️</div>
+    </div>
+  </section>
+
+  <section class="section" id="toys">
+    <div class="section-title">
+      <p class="tag">OUR COLLECTION</p>
+      <h2>Popular Toys</h2>
+      <p>Something fun for every little creator.</p>
+    </div>
+
+    <div class="products">
+      <article class="card">
+        <div class="product-img purple">🧸</div>
+        <h3>Super Teddy</h3>
+        <p>Soft & cuddly friend</p>
+        <div class="card-bottom"><b>₹499</b><button onclick="addToCart('Super Teddy',499)">Add +</button></div>
+      </article>
+
+      <article class="card">
+        <div class="product-img yellow">🧩</div>
+        <h3>Brain Puzzle</h3>
+        <p>Fun thinking challenge</p>
+        <div class="card-bottom"><b>₹349</b><button onclick="addToCart('Brain Puzzle',349)">Add +</button></div>
+      </article>
+
+      <article class="card">
+        <div class="product-img blue">🚗</div>
+        <h3>Speed Racer</h3>
+        <p>Ready, set, race!</p>
+        <div class="card-bottom"><b>₹599</b><button onclick="addToCart('Speed Racer',599)">Add +</button></div>
+      </article>
+
+      <article class="card">
+        <div class="product-img pink">🦄</div>
+        <h3>Magic Unicorn</h3>
+        <p>A magical playmate</p>
+        <div class="card-bottom"><b>₹449</b><button onclick="addToCart('Magic Unicorn',449)">Add +</button></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="creative" id="creative">
+    <div>
+      <p class="tag">CREATIVE CORNER</p>
+      <h2>Make. Build. Imagine.</h2>
+      <p>Let creativity take the lead with building sets, art kits and exciting DIY toys.</p>
+      <a href="#toys" class="primary-btn">Shop Creative Toys</a>
+    </div>
+    <div class="creative-boxes">
+      <div>🎨<small>Art Kits</small></div>
+      <div>🧱<small>Build Sets</small></div>
+      <div>✂️<small>DIY Crafts</small></div>
+      <div>🔬<small>Science Fun</small></div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <p class="tag">WHY TOYNEST?</p>
+    <h2>More than toys — it's imagination.</h2>
+    <div class="features">
+      <div><span>🌈</span><h3>Colorful</h3><p>Fun designs that make playtime brighter.</p></div>
+      <div><span>💡</span><h3>Creative</h3><p>Toys that encourage ideas and imagination.</p></div>
+      <div><span>⭐</span><h3>Joyful</h3><p>Made for memorable moments and happy play.</p></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="logo">🧸 ToyNest</div>
+  <p>© 2026 ToyNest. Play more. Imagine more.</p>
+</footer>
+
+<div id="cartModal" class="modal">
+  <div class="modal-box">
+    <button class="close" onclick="closeCart()">×</button>
+    <h2>Your Cart 🛒</h2>
+    <div id="cartItems"></div>
+    <h3 id="cartTotal">Total: ₹0</h3>
+    <button class="primary-btn" onclick="checkout()">Checkout</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
